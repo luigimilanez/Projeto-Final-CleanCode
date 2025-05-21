@@ -1,0 +1,6 @@
+@clean_code_refactor_HostAddress = http://localhost:5274
+
+GET {{clean_code_refactor_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
