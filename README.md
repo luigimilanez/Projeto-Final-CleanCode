@@ -1,15 +1,31 @@
-# Projeto-Final-CleanCode
-Projeto destinado a refatoração completa do projeto antigo criado na 1ª Fase do curso Engenharia de Software
-<br>[Link do Projeto Original](https://github.com/luigimilanez/ProjetoFinalProgramacao)
+# Refatoração do Projeto de Cadastro de Reservas
 
-# Linguagens e Tecnologias Utilizadas
-1. Docker
-2. SQL Server
-3. Python
-4. ReactJS
-# Instanciando Projeto
-1. Baixe e rode a imagem docker com o comando abaixo:
+Este projeto é uma refatoração em C# com ASP.NET Core de um sistema de cadastro de reservas originalmente desenvolvido em Python, durante a primeira fase da disciplina de Engenharia de Software. O objetivo é aplicar boas práticas da plataforma .NET, utilizando Entity Framework Core com SQLite como banco de dados.
 
-   ```bash
-   docker-compose up -d
-2. Baixe as dependências do código:
+## Tecnologias Utilizadas
+
+- ASP.NET Core
+- C#
+- Entity Framework Core
+- SQLite
+- AutoMapper
+- Moq
+
+## Banco de Dados
+
+O banco de dados utilizado é o SQLite, por ser leve e prático para projetos locais. Abaixo estão os comandos necessários para criar o banco de dados usando migrations do Entity Framework Core:
+
+```bash
+# Criar a primeira migration
+dotnet ef migrations add Inicial
+
+# Aplicar a migration e criar o banco de dados
+dotnet ef database update
+
+# Restaurar os pacotes
+dotnet restore
+
+# Executar a aplicação
+dotnet run
+
+A aplicação estará disponível em https://localhost:5001 ou http://localhost:5000, conforme a configuração padrão.
